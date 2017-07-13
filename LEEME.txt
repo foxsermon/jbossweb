@@ -1,0 +1,32 @@
+Usa export project para mandarlo a tomcat, no uses el Run on Server.
+
+iniciar tomcat
+ %> tom7up
+ %> tom7down
+ 
+ Instalar dependencias para python
+ 
+ %> apt-get install python-setuptools
+ %> easy_install web.py
+ 
+ %> apt-get install libmysqlclient-dev
+ %> apt-get install python-dev
+ 
+$ gunzip MySQL-python-1.2.2.tar.gz
+$ tar -xvf MySQL-python-1.2.2.tar
+$ cd MySQL-python-1.2.2
+$ python setup.py build
+$ python setup.py install
+ 
+ 
+
+
+mvn install:install-file -DgroupId=mysql -DartifactId=mysql-connector-java -Dversion=5.1.25 -Dpackaging=jar -Dfile=/Users/js1611/temp/lib/mysql-connector-java-5.1.18.jar -DcreateChecksum=true
+
+mvn install:install-file -DgroupId=mysql -DartifactId=mysql-connector-java -Dversion=5.1.22 -Dpackaging=jar -Dfile=/Users/js1611/temp/lib/mysql-connector-java-5.1.18.jar -DcreateChecksum=true
+
+mvn install:install-file -DgroupId=commons-pool -DartifactId=commons-pool -Dversion=1.5.4 -Dpackaging=jar -Dfile=/Users/js1611/apps/tomcatSpring/webapps/SoloTerceraUno/WEB-INF/lib/commons-pool-1.5.4.jar
+
+mvn install:install-file -DgroupId=net.sf.ehcache -DartifactId=ehcache -Dversion=2.9.0 -Dpackaging=jar -Dfile=/Users/js1611/apps/tomcatSpring/webapps/SoloTerceraUno/WEB-INF/lib/ehcache-core-2.4.2.jar
+
+mvn install:install-file -DgroupId=com.microsoft.sqlserver -DartifactId=sqljdbc4 -Dversion=4.0 -Dpackaging=jar -Dfile=/Users/js1611/temp/workspace/Topics/sqljdbc4.jar

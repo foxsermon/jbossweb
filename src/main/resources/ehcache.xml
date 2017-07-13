@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ehcache 
+    updateCheck="true"
+    monitoring="autodetect"
+    dynamicConfig="true">
+    
+    <diskStore path="java.io.tmpdir" />
+    
+    <cache name="usuarios"
+        maxEntriesLocalHeap="10000"
+        maxEntriesLocalDisk="1000"
+        eternal="false"
+        diskSpoolBufferSizeMB="20"
+        timeToIdleSeconds="300" timeToLiveSeconds="600"
+        memoryStoreEvictionPolicy="LFU"
+        transactionalMode="off">
+        <persistence strategy="localTempSwap" />
+    </cache>
+    
+    <cache name="offers"
+        maxEntriesLocalHeap="10000"
+        maxEntriesLocalDisk="1000"
+        eternal="false"
+        diskSpoolBufferSizeMB="20"
+        timeToIdleSeconds="300" timeToLiveSeconds="600"
+        memoryStoreEvictionPolicy="LFU"
+        transactionalMode="off">
+        <persistence strategy="localTempSwap" />
+    </cache>
+
+    <cache name="offerByUser"
+        maxEntriesLocalHeap="10000"
+        maxEntriesLocalDisk="1000"
+        eternal="false"
+        diskSpoolBufferSizeMB="20"
+        timeToIdleSeconds="300" timeToLiveSeconds="600"
+        memoryStoreEvictionPolicy="LFU"
+        transactionalMode="off">
+        <persistence strategy="localTempSwap" />
+    </cache>
+
+    <cache name="offerById"
+        maxEntriesLocalHeap="10000"
+        maxEntriesLocalDisk="1000"
+        eternal="false"
+        diskSpoolBufferSizeMB="20"
+        timeToIdleSeconds="300" timeToLiveSeconds="600"
+        memoryStoreEvictionPolicy="LFU"
+        transactionalMode="off">
+        <persistence strategy="localTempSwap" />
+    </cache>
+<!--    
+    <cache name="usuarios"
+        maxElementsInMemory="100" 
+        eternal="false" 
+        timeToIdleSeconds="120" 
+        timeToLiveSeconds="120" 
+        overflowToDisk="true" 
+        maxElementsOnDisk="1000" 
+        diskPersistent="false" 
+        diskExpiryThreadIntervalSeconds="120" 
+        memoryStoreEvictionPolicy="LRU" />
+
+    <cache name="offers"
+        maxElementsInMemory="100" 
+        eternal="false" 
+        timeToIdleSeconds="120" 
+        timeToLiveSeconds="120" 
+        overflowToDisk="true" 
+        maxElementsOnDisk="1000" 
+        diskPersistent="false" 
+        diskExpiryThreadIntervalSeconds="120" 
+        memoryStoreEvictionPolicy="LRU" />
+    <cache name="offerByUser"
+        maxElementsInMemory="100" 
+        eternal="false" 
+        timeToIdleSeconds="120" 
+        timeToLiveSeconds="120" 
+        overflowToDisk="true" 
+        maxElementsOnDisk="1000" 
+        diskPersistent="false" 
+        diskExpiryThreadIntervalSeconds="120" 
+        memoryStoreEvictionPolicy="LRU" />
+    <cache name="offerById"
+        maxElementsInMemory="100" 
+        eternal="false" 
+        timeToIdleSeconds="120" 
+        timeToLiveSeconds="120" 
+        overflowToDisk="true" 
+        maxElementsOnDisk="1000" 
+        diskPersistent="false" 
+        diskExpiryThreadIntervalSeconds="120" 
+        memoryStoreEvictionPolicy="LRU" />
+-->
+</ehcache>
